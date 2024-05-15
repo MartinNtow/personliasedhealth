@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
      <p>
-      this page is for sign up
+      this page is for sign
      </p>
      <Link href="/Home">Home</Link>
     </main>
