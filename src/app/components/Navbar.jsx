@@ -8,7 +8,7 @@ const Navbar = () => {
        
        <div className={styles.appname}>
         <Link href = "/Home" className= {styles.link1}>
-         <h1 >TailorCare</h1>
+         <h1 >WellNest</h1>
         </Link>
        </div>
 
