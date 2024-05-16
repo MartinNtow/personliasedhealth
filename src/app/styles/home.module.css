@@ -2,7 +2,7 @@
    
     position: relative;
     overflow: hidden;
-    top: 10px;
+    top: 15px;
 }
 .container::before{
     content: "";
