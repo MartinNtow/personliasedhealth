@@ -1,14 +1,24 @@
 .container{
-    background: linear-gradient(
-        to right,
-        green 0%,
-        white 30%,
-        green 100%
-    ) ;
-    
-    height: 100vh;
+   
     position: relative;
-    top: 20px;
+    overflow: hidden;
+    top: 10px;
+}
+.container::before{
+    content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/projectbackground.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  filter: blur(5px);
+  z-index: -1;
+    
+
 }
 .container2{
     position: relative;
@@ -18,17 +28,18 @@
     width: 60%;
     margin: 0 auto;
     border-radius: 40px;
+    background-color: blue;
 }
 
 .container h1{
     text-align: center;
     font-size: 80px;
-    color: green;
+    color: white;
    
     
 }
 .container span{
-    background-color: white;
+    background-color: blue;
     border-radius: 20px;
     font-size: 80px;
     box-shadow: 0px 0px 18px green;
@@ -36,12 +47,12 @@
 .container2 p{
     text-align: center;
     font-size: 25px;
-    color: green
+    color: white;
 }
 .help{
     text-align: center;
-    font-size: 40px;
-    color: green
+    font-size: 45px;
+    color: blue;
 }
 
 .reason{
@@ -61,7 +72,7 @@
     text-decoration: none;
 }
 .one p{
-    color: black;
+    color: white;
     font-size: 25px;
     text-align: center;
 }
@@ -70,34 +81,24 @@
     width: 307px;
     
 }
-.one span{
-    background-color: white;
-    border-radius: 50px;
-    font-size: 50px;
-    box-shadow: 0px 0px 18px green;
-    margin-left: 140px;
-}
+
+
 .two{
     width: 30%;
     /* border: 1px solid white; */
     position: relative;
     right: 350px;
 }
+
 .linktwo{
     text-decoration: none;
 }
 .two p{
     color: black
 }
-.two span{
-    background-color: white;
-    border-radius: 20px;
-    font-size: 50px;
-    box-shadow: 0px 0px 18px green;
-    margin-left: 140px;
-}
+
 .two p{
-    color: black;
+    color: white;
     font-size: 25px;
     text-align: center;
 }
@@ -106,5 +107,5 @@
     height: 215px;
 }
 .container img{
-    outline: 5px solid white;
+    outline: 5px solid blue;
 }

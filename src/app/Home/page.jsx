@@ -17,7 +17,7 @@ const page = () => {
       <div className={styles.reason}>
         <div className={styles.one}>
           <Link href="/Healthpage" className={styles.linkone}>
-            <span>1</span>
+            
             <p>Get a personalized plan</p> <br />
             <img src="/treatment pic.jpg" alt="" />
           </Link>
@@ -25,7 +25,7 @@ const page = () => {
 
         <div className={styles.two}>
           <Link href="/Symptomchecker" className={styles.linktwo}>
-            <span>2</span>
+            
             <p>Interact with our AI to figure out what is wrong</p> 
             <img src="/AI pic.webp" alt="" />
           </Link>
