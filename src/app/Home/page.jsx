@@ -26,7 +26,7 @@ const page = () => {
         <div className={styles.two}>
           <Link href="/Symptomchecker" className={styles.linktwo}>
             
-            <p>Interact with our AI to figure out what is wrong</p> 
+            <p>Interact with our AI </p>  <br />
             <img src="/AI pic.webp" alt="" />
           </Link>
         </div>
