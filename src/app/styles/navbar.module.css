@@ -1,3 +1,57 @@
 .container{
-    background-color: red;
+    background-color: white;
+    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0px 0px 15px rgb(1, 54, 1);
+
 }
+.appname{
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+.appname h1{
+    color: green;
+    font-size: 40px;
+    position: relative;
+    left: 40px;
+    top: 12px;
+}
+.link1{
+    text-decoration: none;
+}   
+.nav{
+    font-size: 20px;
+    color: green;
+    position: relative;
+    left: 300px;
+    top: 27px;
+    justify-content: space-between;
+    margin-left: 100px;
+    text-decoration: none;
+    text-align: center;
+    
+
+    background:
+      linear-gradient(
+        to right,
+        rgb(0, 28, 0),
+        rgb(1, 63, 1)
+      ),
+      linear-gradient(
+        to right,
+        green,
+        white,
+        green
+    );
+    background-size: 100% 3px, 0 3px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 350ms;
+}
+
+  
+  .nav:hover {
+    background-size: 0 3px, 100% 3px;
+    
+  }
