@@ -4,7 +4,10 @@ import Link from 'next/link'
 
 const Navbar = () => {
   return (
+<<<<<<< HEAD
 
+=======
+>>>>>>> d8951565f60603c8cfc5694866c60fe545fc2306
     <div className = {styles.container}>
        
        <div className={styles.appname}>
@@ -19,7 +22,10 @@ const Navbar = () => {
        </div>
        
       
+<<<<<<< HEAD
 
+=======
+>>>>>>> d8951565f60603c8cfc5694866c60fe545fc2306
     </div>
     
   )
