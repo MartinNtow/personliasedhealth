@@ -22,8 +22,8 @@ const page = () => {
           </button></Link>
         </div>
         <div className={styles.griditems}>
-          <Link href="/Aging"><button>
-            Aging
+          <Link href="/Toothdecay"><button>
+            Tooth Decay
           </button></Link>
         </div>
         <div className={styles.griditems}>
