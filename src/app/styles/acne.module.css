@@ -3,6 +3,7 @@
     position: relative;
     overflow: hidden;
     top: 15px;
+    height: 89vh;
 }
 .container::before{
     content: "";
@@ -56,7 +57,7 @@
 .treat1{
     width: 400px;
     text-align: center;
-    border: 1px solid white;
+    border: 1px solid #032b3e;
 }
 .treat1 img{
     width: 400px;
@@ -73,7 +74,7 @@
 .treat2{
     width: 400px;
     text-align: center;
-    border: 1px solid white;
+    border: 1px solid #032b3e;
 }
 .treat2 img{
     width: 400px;
@@ -82,7 +83,7 @@
 .treat3{
     width: 400px;
     text-align: center;
-    border: 1px solid white;
+    border: 1px solid #032b3e;
 }
 .treat3 img{
     width: 400px;
