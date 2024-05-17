@@ -1,6 +1,7 @@
 .main{
     position: relative;
     overflow: hidden;
+    height: 89vh;
 }
 
 .main::before{
@@ -16,4 +17,44 @@
   background-position: center;
   filter: blur(5px);
   z-index: -1;
+}
+.container{
+  border: 1px solid white;
+  border-radius: 20px;
+  width: 23%;
+  height: 50%;
+  position: relative;
+  left: 550px;
+  top: 100px;
+}
+.container input{
+  width: 80%;
+  height: 40px;
+  margin-left: 28px;
+  background-color: transparent;
+}
+.container input::placeholder{
+  text-align: center;
+  color: black;
+  font-size: 15px;
+}
+.container h2{
+  text-align: center;
+}
+.container button{
+  width: 55%;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #032b3e;
+  position: relative;
+  left: 80px;
+}
+.link1{
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  margin-left: 110px;
+}
+.link1:hover{
+  text-decoration: underline;
 }
