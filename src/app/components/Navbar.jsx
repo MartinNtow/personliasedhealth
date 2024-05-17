@@ -4,10 +4,6 @@ import Link from 'next/link'
 
 const Navbar = () => {
   return (
-<<<<<<< HEAD
-    <div>
-      this is the navbars
-=======
     <div className = {styles.container}>
        
        <div className={styles.appname}>
@@ -22,7 +18,6 @@ const Navbar = () => {
        </div>
        
       
->>>>>>> 9b48cbcb64057eb41cf712608ef63ab22222df80
     </div>
     
   )
