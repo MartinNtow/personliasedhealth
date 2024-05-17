@@ -3,7 +3,7 @@
     height: 80px;
     display: flex;
     flex-wrap: wrap;
-    box-shadow: 0px 0px 15px rgb(2, 2, 224);
+    box-shadow: 0px 0px 15px #032b3e;
 
 }
 .appname{
@@ -11,7 +11,7 @@
     font-weight: bold;
 }
 .appname h1{
-    color: blue;
+    color: #032b3e;
     font-size: 40px;
     position: relative;
     left: 40px;
@@ -22,7 +22,7 @@
 }   
 .nav{
     font-size: 20px;
-    color: blue;
+    color: #032b3e;
     position: relative;
     left: 300px;
     top: 27px;
@@ -35,14 +35,14 @@
     background:
       linear-gradient(
         to right,
-        blue,
-        blue
+        #032b3e,
+        #032b3e
       ),
       linear-gradient(
         to right,
-        blue,
+        #032b3e,
         white,
-        blue
+        #032b3e
     );
     background-size: 100% 3px, 0 3px;
     background-position: 100% 100%, 0 100%;
