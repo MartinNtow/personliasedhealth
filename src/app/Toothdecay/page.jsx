@@ -28,6 +28,7 @@ const page = () => {
                 <img src="/pitandfissure.png" alt="" /> <br /><br /><br />
                 <Link href="#" className={styles.link2}>Pit and Fissure Cavities&rarr;</Link>
             </div> 
+        </div>
     </div>
   )
 }
