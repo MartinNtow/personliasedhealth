@@ -2,7 +2,7 @@
    
     position: relative;
     overflow: hidden;
-    top: 15px;
+    top: 0px;
 }
 .container::before{
     content: "";
@@ -23,7 +23,7 @@
 .container2{
     position: relative;
     top: 10px;
-    box-shadow: 0px 0px 20px white;
+    box-shadow: 0px 0px 20px blue;
     height: 32vh;
     width: 60%;
     margin: 0 auto;
