@@ -19,7 +19,7 @@ const page = () => {
           <Link href="/Healthpage" className={styles.linkone}>
             
             <p>Get a personalized plan</p> <br />
-            <img src="/treatment pic.jpg" alt="" />
+            <img src="/treatment pic.jpg" alt="treatment pic" />
           </Link>
         </div>
 
