@@ -32,6 +32,8 @@
   height: 40px;
   margin-left: 28px;
   background-color: transparent;
+  border: none;
+  border-bottom: 2px solid black;
 }
 .container input::placeholder{
   text-align: center;
