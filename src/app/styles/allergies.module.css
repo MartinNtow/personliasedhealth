@@ -3,7 +3,7 @@
     position: relative;
     overflow: hidden;
     top: 15px;
-    height: 89vh;
+    height: 120vh;
 }
 .container::before{
     content: "";
