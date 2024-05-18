@@ -2,32 +2,14 @@
    
     position: relative;
     overflow: hidden;
-    top: 15px;
+   
 }
-.container::before{
-    content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('/projectbackground.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    filter: blur(5px);
-    z-index: -1;
-    
 
-}
-.header{
-    background-color: #032b3e;
-    height: 120px;
-}
+
 .header h1{
     font-size: 50px;
-    color: white;
-    margin-left: 50px;
+    color: #032b3e;
+    text-align: center;
 }
 .header p{
     width: 300px;

@@ -8,7 +8,7 @@ const page = () => {
       <div className={styles.header}>
         <h1>Wellness Mindset</h1>
         <p>...</p>
-      </div>  <br /> <br />
+      </div>  
 
       <div className={styles.listgrid}>
         <div className={styles.griditems}>

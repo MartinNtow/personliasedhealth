@@ -15,17 +15,7 @@ const page = () => {
         </div> <br /><br /><br />
         </div>
 
-        <div className={styles.listitems}>
-            <div className={styles.treat1}>
-                    <img src="/malariakid.png" alt="" /> <br /><br /><br />
-                    <Link href="#" className={styles.link2}>Treating Malaria for Children &rarr;</Link>
-                </div>
-
-                <div className={styles.treat2}>
-                    <img src="/malariaadult.png" alt="" /> <br /> <br /><br />
-                    <Link href="#" className={styles.link2}>Treating Malaria for Adults &rarr;</Link>
-                </div>
-        </div>
+       
     </div>
   )
 }

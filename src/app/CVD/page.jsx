@@ -19,34 +19,7 @@ const page = () => {
     <br />
     <br />
     <br />
-    <div className={styles.listitems}>
-      <div className={styles.treat1}>
-        <img src="/cvd.png" alt="" /> <br />
-        <br />
-        <br />
-        <Link href="#" className={styles.link2}>
-        Unveiling the Link Between Stress-Related Brain Activity and the Heart-Healthy Power of Exercise &rarr;
-        </Link>
-      </div>
-
-      <div className={styles.treat2}>
-        <img src="/alcohol.png" alt="" /> <br /> <br />
-        <br />
-        <Link href="#" className={styles.link2}>
-        Cheers to Your Heart: Study Finds Lowering Alcohol Intake Can Cut Cardiovascular Risks &rarr;
-        </Link>
-      </div>
-
-      <div className={styles.treat3}>
-        <img src="/walking.png" alt="" /> <br />
-        <br />
-        <br />
-        <Link href="#" className={styles.link2}>
-        Walking 10,000 Steps a Day Shields Heart and Extends Life, Even for the Sedentary! &rarr;
-        </Link>
-      </div>
-    </div>
-    <br />
+    
   </div>
   )
 }

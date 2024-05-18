@@ -1,6 +1,6 @@
-import React from "react";
-import Link from "next/link";
-import styles from "../styles/allergies.module.css";
+import React from 'react'
+import styles from '../styles/demantia.module.css'
+import Link from 'next/link'
 
 const page = () => {
   return (
@@ -10,18 +10,18 @@ const page = () => {
           <Link href="/Healthpage" className={styles.link1}>
             Personalized Health & Wellness
           </Link>{" "}
-          &rarr; Allergies
+          &rarr; Demantia
         </p>
       </div>
       <div className={styles.heading}>
-        <h1>Allergies</h1>
+        <h1>Demantia</h1>
       </div>{" "}
       <br />
       <br />
       <br />
-      
+     
     </div>
-  );
-};
+  )
+}
 
-export default page;
+export default page

@@ -2,24 +2,9 @@
    
     position: relative;
     overflow: hidden;
-    top: 15px;
     height: 89vh;
 }
-.container::before{
-    content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('/projectbackground.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  filter: blur(5px);
-  z-index: -1;
 
-}
 .seminav{
     color: black;
     height: 30px;
@@ -28,7 +13,7 @@
     
 }
 .seminav p{
-    margin-left: 200px;
+    margin-left: 20px;
     padding-top: 5px;
     text-align: center;
    
@@ -44,48 +29,5 @@
 .heading{
     color: black;
     font-size: 40px;
-    margin-left: 200px;
     text-align: center;
-}
-.listitems{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);  
-    padding: 30px;
-    gap: 70px;
-    margin-left: 60px;
-}
-.treat1{
-    width: 400px;
-    text-align: center;
-    border: 1px solid #032b3e;
-}
-.treat1 img{
-    width: 400px;
-    height: 150px;
-}
-.link2{
-    text-decoration: none;
-    color: black;
-    font-size: 30px;
-}
-.link2:hover{
-    text-decoration: underline;
-}
-.treat2{
-    width: 400px;
-    text-align: center;
-    border: 1px solid #032b3e;
-}
-.treat2 img{
-    width: 400px;
-    height: 150px;
-}
-.treat3{
-    width: 400px;
-    text-align: center;
-    border: 1px solid #032b3e;
-}
-.treat3 img{
-    width: 400px;
-    height: 150px;
 }

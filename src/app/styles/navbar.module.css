@@ -4,6 +4,9 @@
     display: flex;
     flex-wrap: wrap;
     box-shadow: 0px 0px 15px #032b3e;
+    z-index: 1000;
+    position: sticky;
+    top: 0;
 
 }
 .appname{
@@ -32,22 +35,7 @@
     text-align: center;
     
 
-    background:
-      linear-gradient(
-        to right,
-        #032b3e,
-        #032b3e
-      ),
-      linear-gradient(
-        to right,
-        #032b3e,
-        white,
-        #032b3e
-    );
-    background-size: 100% 3px, 0 3px;
-    background-position: 100% 100%, 0 100%;
-    background-repeat: no-repeat;
-    transition: background-size 350ms;
+    
 }
 
   
