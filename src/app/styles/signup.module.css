@@ -61,4 +61,9 @@
     border-radius: 30px;
     position: relative;
     left: 130px;
+    cursor: pointer;
 }
+.auth-SUphrase{
+    margin: 10px 10px;
+    color: white;
+  }

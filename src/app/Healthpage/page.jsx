@@ -1,146 +1,67 @@
-import React from 'react'
-import Link from 'next/link'
-import styles from '../styles/healthpage.module.css'
-import Navbar from '../components/Navbar'
+"use client";
+import React, { useState } from "react";
+import Link from "next/link";
+import styles from "../styles/healthpage.module.css";
+import Navbar from "../components/Navbar";
+import { db } from "../firebase/config";
+import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "@/app/firebase/config";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 const page = () => {
+  const router = useRouter();
+  const [user] = useAuthState(auth);
+  const userSession =
+    typeof window !== "undefined" ? sessionStorage.getItem("user") : null;
+  useEffect(() => {
+    if (!user && !userSession) {
+      router.push("/");
+    }
+  }, []);
+  const [Diseases, setDiseases] = useState([]);
+  //getting data from firebase
+  useEffect(() => {
+    const reference = collection(db, "diseases");
+
+    const dbQuery = query(reference, orderBy("id", "asc"));
+
+    onSnapshot(dbQuery, (querySnapshot) => {
+      let i = 1;
+
+      // Load data to Array
+      setDiseases(
+        querySnapshot.docs.map((doc) => {
+          let data = doc.data();
+
+          return {
+            ...data,
+          };
+        })
+      );
+    });
+
+  }, []);
   return (
     <>
-    <Navbar/>
-    <div className={styles.container}>
-      <div className={styles.header}>
-        <h1>Wellness Mindset</h1>
-        <p>...</p>
-      </div>  
-
-      <div className={styles.listgrid}>
-        <div className={styles.griditems}>
-          <Link href="/Malaria"><button>
-            Malaria
-          </button></Link>
+      <Navbar />
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <h1>Wellness Mindset</h1>
         </div>
-        <div className={styles.griditems}>
-          <Link href="/Acne"><button>
-            Acne
-          </button></Link>
-        </div>
-        <div className={styles.griditems}>
-          <Link href="/Toothdecay"><button>
-            Tooth Decay
-          </button></Link>
-        </div>
-        <div className={styles.griditems}>
-          <Link href="Allergies"><button>
-            Allergies
-          </button></Link>
-        </div>
-        <div className={styles.griditems}>
-          <Link href="CVD"><button>
-            CVD
-          </button></Link>
-        </div>
-        <div className={styles.griditems}>
-          <Link href="Cancer"><button>
-            Cancer
-          </button></Link>
-        </div>
-        <div className={styles.griditems}>
-          <Link href="Demantia"><button>
-            Demantia
-          </button> </Link>
-        </div>
-        <div className={styles.griditems}>
-          <Link href="Diabetis"><button>
-            Diabetis
-          </button></Link>
-        </div>
-        <div className={styles.griditems}>
-          <Link href="Guthealth"><button>
-            Gut Health
-          </button></Link>
-        </div>
-        <div className={styles.griditems}>
-          <Link href="Anemia"><button>
-            Anemia
-          </button></Link>
-        </div>
-        <div className={styles.griditems}>
-          <Link href="HIVAIDS"><button>
-            HIV/AIDS
-          </button></Link>
-        </div>
-        <div className={styles.griditems}>
-          <Link href="Asthma"><button>
-           Asthma
-          </button></Link>
-        </div>
-        <div className={styles.griditems}>
-          <Link href="Flu"><button>
-            Flu
-          </button></Link>
-        </div>
-        <div className={styles.griditems}>
-          <Link href="Mentalhealth"><button>
-            Mental Health
-          </button></Link>
-        </div>
-        <div className={styles.griditems}>
-          <Link href="Pneumonia"><button>
-            Pneumonia
-          </button></Link>
-        </div>
-        <div className={styles.griditems}>
-          <Link href="Hairloss"><button>
-            Hair Loss
-          </button></Link>
-        </div>
-        <div className={styles.griditems}>
-          <Link href="Hepatitis"><button>
-            Hepatitis
-          </button></Link>
-        </div>
-        <div className={styles.griditems}>
-          <Link href="Kidneystone"><button>
-            Kidney Stone
-          </button></Link>
-        </div>
-        <div className={styles.griditems}>
-          <Link href="Cold"><button>
-            Cold
-          </button></Link>
-        </div>
-        <div className={styles.griditems}>
-          <Link href="Hypertension"><button>
-            Hypertension
-          </button></Link>
-        </div>
-        <div className={styles.griditems}>
-          <Link href="Osteoporosis"><button>
-            Osteoporosis
-          </button></Link>
-        </div>
-        <div className={styles.griditems}>
-          <Link href="Stroke"><button>
-            Stroke
-          </button></Link>
-        </div>
-        <div className={styles.griditems}>
-          <Link href="Vision"><button>
-            Vision
-          </button></Link>
-
-        </div>
-        <div className={styles.griditems}>
-          <Link href="Obesity"><button>
-            Obesity
-          </button></Link>
-        </div>
-
-        
+        {Diseases.map((Disease) => (
+          <div className={styles.listgrid} key={Disease.id}>
+            <div className={styles.griditems}>
+            <Link href={`/${Disease.id}`}> 
+              <button>{Disease.name}</button>
+              </Link>
+            </div>
+          </div>
+        ))}
       </div>
-    </div>
     </>
-  )
-}
+  );
+};
 
-export default page
+export default page;
