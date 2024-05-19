@@ -1,9 +1,12 @@
 import React from "react";
 import Link from "next/link";
 import styles from "../styles/allergies.module.css";
+import Navbar from "../components/Navbar";
 
 const page = () => {
   return (
+    <>
+    <Navbar/>
     <div className={styles.container}>
       <div className={styles.seminav}>
         <p>
@@ -21,6 +24,7 @@ const page = () => {
       <br />
       
     </div>
+    </>
   );
 };
 

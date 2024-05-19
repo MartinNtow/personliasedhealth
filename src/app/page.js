@@ -13,7 +13,11 @@ export default function Home() {
 
           <input type="password" placeholder="password" required/> <br/> <br/><br/>
 
-          <button href='/Healthpage'>LOGIN</button> <br/><br/>
+          <Link href='/Healthpage'>
+          <button >LOGIN</button> <br/><br/>
+          </Link>
+          
+         
 
           <Link href="/Signup" className={styles.link1}>New User? Sign Up</Link>
         </form>
