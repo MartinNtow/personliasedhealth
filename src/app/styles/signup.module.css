@@ -4,6 +4,7 @@
     overflow: hidden;
     top: 15px;
     height: 89vh;
+    
 }
 
 .container input{
@@ -16,12 +17,12 @@
 }
 .form input::placeholder{
     text-align: center;
-    color: white;
+    color: black;
 }
 
 .form{
     box-sizing: border-box;
-    border: 1px solid white;
+    border: 1px solid black;
     border-radius: 5px;
     background-color: transparent;
     width: 30%;

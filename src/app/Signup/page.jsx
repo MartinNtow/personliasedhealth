@@ -4,6 +4,7 @@ import Link from 'next/link'
 
 const page = () => {
   return (
+    
     <div className={styles.container}>
         <div className={styles.form}> <br /><br />
             <h2>Registration Form</h2> <br />
@@ -27,6 +28,7 @@ const page = () => {
             </form>
         </div>
     </div>
+
   )
 }
 
