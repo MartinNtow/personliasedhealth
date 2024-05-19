@@ -1,9 +1,12 @@
 import React from 'react'
 import Link from 'next/link'
 import styles from '../styles/healthpage.module.css'
+import Navbar from '../components/Navbar'
 
 const page = () => {
   return (
+    <>
+    <Navbar/>
     <div className={styles.container}>
       <div className={styles.header}>
         <h1>Wellness Mindset</h1>
@@ -136,6 +139,7 @@ const page = () => {
         
       </div>
     </div>
+    </>
   )
 }
 
