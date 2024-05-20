@@ -1,0 +1,78 @@
+.container{
+   
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    
+}
+
+.seminav{
+    color: black;
+    height: 30px;
+    background-color: whitesmoke;
+    
+    
+}
+.seminav p{
+    margin-left: 20px;
+    padding-top: 5px;
+    text-align: center;
+   
+}
+.link1{
+    text-decoration: none;
+    color: black;
+    
+}
+.link1:hover{
+    text-decoration: underline;
+}
+.heading h1{
+    color: #032b3e;
+    font-size: 70px;
+    text-align: center;
+}
+.heading h2{
+    color: #032b3e;
+    text-align: center;
+    text-decoration: underline;
+}
+.heading p{
+    text-align: center;
+    width: 700px;
+    font-weight: bold;
+    margin-left: 430px;
+    font-size: 22px;
+}
+.container ul li{
+    /* text-align: center; */
+    line-height: 40px;
+    /* list-style: none; */
+    width: 440px;
+    margin-left: 550px;
+    font-size: 20px;
+    
+}
+.container img{
+    width: 350px;
+    height: 250px;
+    margin-left: 590px;
+}
+
+.treatment h2{
+    color: #032b3e;
+    text-align: center;
+}
+
+.treatment p{
+    text-align: center;
+    color: #032b3e;
+    font-size: 20px;
+}
+
+.advice h2{
+    color: #032b3e;
+    text-align: center;
+}
+
+
