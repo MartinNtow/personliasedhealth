@@ -13,17 +13,17 @@
 .header p{
     width: 300px;
 }
-.listgrid{
+.listgrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     padding: 30px;
-    gap: 30px;
+    gap: 16px;
     margin-left: 35px;
     
 }
 .griditems{
-
+   
     padding: 10px;
     width: 30px;
     height: 80px;
@@ -37,6 +37,7 @@
     color: white;
     font-size: 18px;
     outline: 1px solid white;
+
 }
 .griditems button:hover{
     font-size: 35px;
