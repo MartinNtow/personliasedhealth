@@ -44,7 +44,7 @@ const page = () => {
     });
 
   }, []);
-  //this is the heealthpage
+  //this is the heealthpa
   return (
     <>
       <Navbar />
