@@ -32,6 +32,9 @@
     font-size: 70px;
     text-align: center;
 }
+.heading h1::selection{
+    background-color: pink
+}
 .heading h2{
     color: #032b3e;
     text-align: center;

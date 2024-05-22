@@ -17,6 +17,13 @@ const Navbar = () => {
           AI Symptom Checker
         </Link>
       </div>
+
+      <div className={styles.logout}>
+        <Link href="/">
+          <button>Log out</button>
+        </Link>
+      </div>
+
     </div>
   );
 };
