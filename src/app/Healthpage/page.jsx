@@ -44,6 +44,7 @@ const page = () => {
     });
 
   }, []);
+  //this is the heealthpa
   return (
     <>
       <Navbar />
@@ -51,16 +52,21 @@ const page = () => {
         <div className={styles.header}>
           <h1>Wellness Mindset</h1>
         </div>
-        {Diseases.map((Disease) => (
-          <div className={styles.listgrid} key={Disease.id}>
-              <div className={styles.griditems}>
-                <Link href={`/${Disease.id}`}> 
+
+        <div className={styles.container}>
+         
+          <div className={styles.gridContainer}>
+            {Diseases.map((Disease) => (
+              <div className={styles.gridItem} key={Disease.id}>
+                <Link href={`/${Disease.id}`}>
                   <button>{Disease.name}</button>
                 </Link>
               </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
+
     </>
   );
 };
