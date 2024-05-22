@@ -63,7 +63,7 @@ const page = () => {
           </div>
 
           {fil.symptom.map((sym) => (
-            <ul>
+            <ul> 
               <li>{sym}</li>
             </ul>
           ))}

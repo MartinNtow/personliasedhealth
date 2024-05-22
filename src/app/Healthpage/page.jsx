@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import styles from "../styles/healthpage.module.css";
+import styles from "../styles/healthpage.module.css"
 import Navbar from "../components/Navbar";
 import { db } from "../firebase/config";
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
@@ -9,6 +9,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "@/app/firebase/config";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
+
 
 const page = () => {
   const router = useRouter();

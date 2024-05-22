@@ -6,14 +6,14 @@
 
 
 .container{
-  border: 1px solid white;
+  border: 1px solid black;
   border-radius: 20px;
   width: 23%;
   height: 50%;
   position: relative;
   left: 550px;
   top: 100px;
-  border: 1px solid ;
+ 
   box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2);
 }
 .container input{

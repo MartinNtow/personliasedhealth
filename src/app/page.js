@@ -43,7 +43,7 @@ export default function Home() {
         setloginButtonDisable(false);
       })
       .catch((e) => {
-        console.error(e);
+        console.log(e);
         setProcessPhrase("Sign In");
         setloginButtonDisable(false);
         setLoginPhrase("please check credentials");
@@ -63,7 +63,7 @@ export default function Home() {
             type="email"
             placeholder="email@xyz"
             required
-            value={email}
+            value={email} 
             onChange={(e) => setEmail(e.target.value)}
           />{" "}
           <br /> <br />
