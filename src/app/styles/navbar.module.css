@@ -1,59 +1,116 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
-.container{
-    background-color: white;
-    height: 80px;
-    display: flex;
-    flex-wrap: wrap;
-    box-shadow: 0px 0px 15px #032b3e;
-    z-index: 1000;
-    position: sticky;
-    top: 0;
 
-}
-.appname{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-
-    font-weight: bold;
-}
-.appname h1{
-    color: #032b3e;
-    font-size: 40px;
-    position: relative;
-    left: 40px;
-    top: 12px;
-}
-.link1{
-    text-decoration: none;
-}   
-.nav{
-    font-size: 20px;
-    color: #032b3e;
-    position: relative;
-    left: 300px;
-    top: 27px;
-    justify-content: space-between;
-    margin-left: 100px;
-    text-decoration: none;
-    text-align: center;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-    
-
-    
+.container {
+  background-color: white;
+  height: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; /* Center content vertically */
+  justify-content: space-between; /* Distribute space between items */
+  box-shadow: 0px 0px 15px #032b3e;
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+  padding: 0 20px; /* Add padding to the container */
 }
 
-  
-  /* .nav:hover {
-    background-size: 0 3px, 100% 3px;
-    
-  } */
+.appname {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
 
-  .logout button{
-    position: relative;
-    left: 550px;
-    top: 22px;
+.appname h1 {
+  color: #032b3e;
+  font-size: 40px;
+}
+
+.link1 {
+  text-decoration: none;
+}
+
+.nav {
+  font-size: 20px;
+  color: #032b3e;
+  margin-left: 40px;
+  text-decoration: none;
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.logout button {
+  padding: 10px;
+  color: white;
+  background-color: red;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Media Queries for different screen sizes */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
     padding: 10px;
-    color: white;
-    background-color: red;
-    border-radius: 10px;
-    border: white;
   }
+
+  .appname h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+
+  .nav {
+    font-size: 18px;
+    margin-left: 0;
+    margin-right: 20px;
+    padding: 5px 0;
+  }
+
+  .logout {
+    align-self: flex-end;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .appname h1 {
+    font-size: 32px;
+  }
+
+  .nav {
+    font-size: 16px;
+  }
+
+  .logout button {
+    padding: 8px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    align-items: center;
+  }
+
+  .appname h1 {
+    font-size: 28px;
+  }
+
+  .nav {
+    font-size: 14px;
+    margin-left: 0;
+    margin-right: 10px;
+    padding: 5px 0;
+  }
+
+  .logout {
+    align-self: center;
+    margin-top: 10px;
+  }
+
+  .logout button {
+    padding: 6px;
+    font-size: 14px;
+  }
+}
