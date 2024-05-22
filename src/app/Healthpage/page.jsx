@@ -52,11 +52,11 @@ const page = () => {
         </div>
         {Diseases.map((Disease) => (
           <div className={styles.listgrid} key={Disease.id}>
-            <div className={styles.griditems}>
-            <Link href={`/${Disease.id}`}> 
-              <button>{Disease.name}</button>
-              </Link>
-            </div>
+              <div className={styles.griditems}>
+                <Link href={`/${Disease.id}`}> 
+                  <button>{Disease.name}</button>
+                </Link>
+              </div>
           </div>
         ))}
       </div>
