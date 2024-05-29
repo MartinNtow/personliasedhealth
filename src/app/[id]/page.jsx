@@ -81,7 +81,7 @@ const page = () => {
              Things you can try if you have {fil.name}
             </h2>
             <p>These techniques may be useful:</p>
-            {fil.treatments.map((treat) => (
+            {fil.treatments.map((treat) => ( 
             <ul>
               <li>{treat}</li>
             </ul>

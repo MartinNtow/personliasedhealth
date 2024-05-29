@@ -7,7 +7,7 @@
   flex-wrap: wrap;
   align-items: center; /* Center content vertically */
   justify-content: space-between; /* Distribute space between items */
-  box-shadow: 0px 0px 15px #032b3e;
+  box-shadow: 0px 0px 15px #395cd8;
   z-index: 1000;
   position: sticky;
   top: 0;
@@ -20,7 +20,7 @@
 }
 
 .appname h1 {
-  color: #032b3e;
+  color: #395cd8;
   font-size: 40px;
 }
 
@@ -30,7 +30,7 @@
 
 .nav {
   font-size: 20px;
-  color: #032b3e;
+  color: #395cd8;
   margin-left: 40px;
   text-decoration: none;
   text-align: center;
