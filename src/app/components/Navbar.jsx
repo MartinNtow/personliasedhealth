@@ -13,7 +13,7 @@ const Navbar = () => {
         <Link href="/Healthpage" className={styles.nav}>
           Personalized Health & Wellness
         </Link>
-        <Link href="/Symptomchecker" className={styles.nav}>
+        <Link href="http://localhost:3001/" className={styles.nav}>
           AI Symptom Checker
         </Link>
       </div>

@@ -6,10 +6,11 @@ import Navbar from "../components/Navbar";
 import { db } from "../firebase/config";
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "@/app/firebase/config";
+// import { auth } from "@/app/firebase/config";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
-
+import { auth } from "../firebase/config";
+import Chatbot from "../components/chatbot"
 
 const page = () => {
   const router = useRouter();
@@ -22,6 +23,7 @@ const page = () => {
     }
   }, []);
   const [Diseases, setDiseases] = useState([]);
+  const [showChatbot, setShowChatbot] = useState(false);
   //getting data from firebase
   useEffect(() => {
     const reference = collection(db, "diseases");
@@ -44,6 +46,10 @@ const page = () => {
     });
 
   }, []);
+
+  const toggleChatbot = () => {
+    setShowChatbot(!showChatbot);
+  };
   //this is the heealthpa
   return (
     <>
@@ -66,7 +72,16 @@ const page = () => {
           </div>
         </div>
       </div>
+      <button className={styles.toggleButton} onClick={toggleChatbot}>
+        Chat with us!
+      </button>
+      {showChatbot && (
+        <div className={styles.chatbotWrapper}>
+          <Chatbot className={styles.chatbotComponent} />
+        </div>
+      )}
 
+            
     </>
   );
 };

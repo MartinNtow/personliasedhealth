@@ -1,0 +1,41 @@
+[
+  {
+    "question": "Are you answering for yourself or someone",
+    "answers": [
+      { "text": "Myself",  "nextQuestion": 1 },
+      { "text": "Someone Else", "nextQuestion": 1 }
+    ]
+
+  },
+  {
+    "question": "What was your sex assigned at birth?",
+    "answers": [
+      { "text": "Male",  "nextQuestion": 2 },
+      { "text": "Female", "nextQuestion": 2 }
+    ]
+
+  },
+  {
+    "question": "How old are you?",
+    "input": "age"
+   
+  
+  },
+ 
+  {
+    "question": "Are you experiencing pain?",
+    "answers": [
+      {
+        "text": "Yes",
+        "answer": "Please seek medical attention.",
+        "final": true
+      },
+      { "text": "No", "nextQuestion": 4 }
+    ]
+  },
+  
+  {
+    "question": "What symptoms are you experiencing?",
+    "input": "symptoms"
+  }
+]

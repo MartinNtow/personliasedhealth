@@ -82,3 +82,95 @@
     font-size: 26px; /* Adjusted font size for very small screens */
   }
 }
+
+.chatbotcontainer {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  width: 300px;
+  max-height: 500px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.toggleButton {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.chatbotmessages {
+  margin-bottom: 20px;
+}
+
+.chatbotquestioncontainer {
+  margin-bottom: 20px;
+}
+
+.chatbotanswercontainer {
+  margin-bottom: 20px;
+}
+
+.chatbotinput {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.chatbotsubmitbutton {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.chatbotanswers {
+  list-style: none;
+  padding: 0;
+}
+
+.chatbotanswerbutton {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.downloadbutton {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.chatbotWrapper {
+  position: fixed;
+  bottom: 70px;
+  left: 20px;
+  z-index: 1000;
+}
+
