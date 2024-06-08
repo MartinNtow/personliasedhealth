@@ -1,6 +1,7 @@
 import { Message } from '@/models'
 import { createParser, ParsedEvent, ReconnectInterval } from 'eventsource-parser'
 
+
 export const config = {
   runtime: 'edge'
 }
@@ -46,7 +47,7 @@ const handler = async (req: Request): Promise<Response> => {
         apiBaseUrl = apiBaseUrl.slice(0, -1)
       }
       apiUrl = `${apiBaseUrl}/v1/chat/completions`
-      apiKey = process.env.OPENAI_API_KEY || ''
+      apiKey =  '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'
       model = 'gpt-3.5-turbo' // todo: allow this to be passed through from client and support gpt-4
     }
     const stream = await OpenAIStream(apiUrl, apiKey, model, messagesToSend)
@@ -64,7 +65,7 @@ const OpenAIStream = async (apiUrl: string, apiKey: string, model: string, messa
   const res = await fetch(apiUrl, {
     headers: {
       'Content-Type': 'application/json',
-      Authorization: `Bearer ${apiKey}`,
+      'Authorization': `Bearer ${apiKey}`,
       'api-key': `${apiKey}`
     },
     method: 'POST',
@@ -85,8 +86,9 @@ const OpenAIStream = async (apiUrl: string, apiKey: string, model: string, messa
       top_p: 0.95
     })
   })
-
+//  console.log(res)
   if (res.status !== 200) {
+
     const statusText = res.statusText
     throw new Error(
       `The OpenAI API has encountered an error with a status code of ${res.status} and message ${statusText}`

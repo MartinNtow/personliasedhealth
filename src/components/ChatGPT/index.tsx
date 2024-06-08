@@ -7,11 +7,14 @@ import { useChatGPT } from './useChatGPT'
 
 import './index.less'
 import 'highlight.js/styles/atom-one-dark.css'
+import Navbar from "../../components/Navbar"
 
 const ChatGPT = (props: ChatGPTProps) => {
   const { loading, disabled, messages, currentMessage, onSend, onClear, onStop } = useChatGPT(props)
 
   return (
+    <>
+    <Navbar/>
     <div className="chat-wrapper">
       {messages.map((message, index) => (
         <MessageItem key={index} message={message} />
@@ -27,6 +30,7 @@ const ChatGPT = (props: ChatGPTProps) => {
         onStop={onStop}
       />
     </div>
+    </>
   )
 }
 
