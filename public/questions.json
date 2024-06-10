@@ -21,21 +21,28 @@
    
   
   },
+  {
+    "question": "Are you currently taking any medication?",
+    "answers": [
+      {"text": "Yes", "nextQuestion": 4},
+      {"text": "No", "nextQuestion": 4}
+    ]
+  },
  
   {
     "question": "Are you experiencing pain?",
     "answers": [
-      {
-        "text": "Yes",
-        "answer": "Please seek medical attention.",
-        "final": true
-      },
-      { "text": "No", "nextQuestion": 4 }
+      {"text": "Yes", "nextQuestion": 5},
+      {"text": "No", "nextQuestion": 5}
     ]
   },
+
+
   
   {
-    "question": "What symptoms are you experiencing?",
+    "question": "What condition is bothering you the most?",
     "input": "symptoms"
   }
+
+  
 ]
