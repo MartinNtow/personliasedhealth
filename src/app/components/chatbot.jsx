@@ -59,7 +59,7 @@ function Chatbot() {
     } else if (inputType === 'symptoms') {
       const symptomsArray = symptoms.split(',').map(s => s.trim().toLowerCase());
       const symptomsKey = symptomsArray.sort().join(',');
-      suggestion = symptomsMapping[symptomsKey] || 'It\'s hard to diagnose. Please consult a healthcare professional.';
+      suggestion = symptomsMapping[symptomsKey] || "It's hard to diagnose. Please consult a healthcare professional.";
       
       setAnswer(suggestion);
       setShowInput(false);
