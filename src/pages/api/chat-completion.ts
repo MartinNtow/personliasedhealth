@@ -76,7 +76,7 @@ const OpenAIStream = async (apiUrl: string, apiKey: string, model: string, messa
       messages: [
         {
           role: 'system',
-          content: `You are an AI assistant that helps people find information.`
+          content: `You are an AI assistant that helps people find information on health.`
         },
         ...messages
       ],
