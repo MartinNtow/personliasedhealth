@@ -64,13 +64,13 @@ const page = () => {
 
           {fil.symptom.map((sym) => (
             <ul> 
-              <li>{sym}</li>
+              <li>- {sym}</li>
             </ul>
           ))}
           <div className={styles.addition}>
           {fil.additional.map((add) => (
             <ul>
-              <li>{add}</li>
+              <li>- {add}</li>
             </ul>
           ))}
           </div>
@@ -83,7 +83,7 @@ const page = () => {
             <p>These techniques may be useful:</p>
             {fil.treatments.map((treat) => ( 
             <ul>
-              <li>{treat}</li>
+              <li>- {treat}</li>
             </ul>
           ))}
           </div> <br /><br /><br />
@@ -92,7 +92,7 @@ const page = () => {
             <h2>When to seek medical advice</h2>
             {fil.advices.map((advice) => (
             <ul>
-              <li>{advice}</li>
+              <li>- {advice}</li>
             </ul>
             ))}
           </div>
