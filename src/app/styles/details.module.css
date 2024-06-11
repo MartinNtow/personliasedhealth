@@ -3,8 +3,16 @@
   position: relative;
   overflow: hidden;
   color: white;
+
 }
-.container::before{
+.container1{
+  border: 1px solid white;
+  width: 60%;
+  margin: 0 auto;
+  background-color: #395cd8;
+
+}
+/* .container::before{
   content: "";
 position: absolute;
 top: 0;
@@ -12,14 +20,14 @@ left: 0;
 width: 100%;
 height: 100%;
 background-image: url('/sethoscope.jpg');
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; 
   background-size: cover;
   background-position: center;
-filter: blur(2px);
+filter: blur(20px);
 z-index: -1;
   
 
-}
+} */
 
 
 
@@ -27,7 +35,7 @@ z-index: -1;
   .seminav {
     color: black;
     height: 30px;
-    background-color: whitesmoke;
+    background-color: white;
   }
   
   .seminav p {
@@ -46,7 +54,7 @@ z-index: -1;
   }
   
   .heading h1 {
-    color: #395cd8;
+    color: black;
     font-size: 70px;
     text-align: center;
     font-weight: bold;
@@ -54,7 +62,7 @@ z-index: -1;
   
   
   .heading h2 {
-    color: #395cd8;
+    color: black;
     text-align: center;
     text-decoration: underline;
     font-weight: bold;
@@ -71,7 +79,7 @@ z-index: -1;
   
   .container ul li {
     line-height: 40px;
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
     font-size: 20px;
     text-align: center;
@@ -82,11 +90,11 @@ z-index: -1;
     height: 250px;
     display: block;
     margin: 20px auto;
-    outline: 3px solid #395cd8;
+    outline: 3px solid black;
   }
   
   .treatment h2 {
-    color: #395cd8;
+    color: black;
     text-align: center;
     font-weight: bold;
     text-decoration: underline;
@@ -100,7 +108,7 @@ z-index: -1;
   }
   
   .advice h2 {
-    color: #395cd8;
+    color: black;
     text-align: center;
     font-weight: bold;
     text-decoration: underline;
