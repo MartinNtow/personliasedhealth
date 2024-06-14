@@ -41,6 +41,15 @@
     "Arthritis": "exercise,use hot and cold therapy,try acupuncture,massage",
     "Gastroenteritis": "stop eating solid food for while,try taking small sips of water,rest,ease back into eating",
     "Tuberculosis": "cover mouth,consult doctor,medication,rest",
+    
+      "fever,cough": "You might have the flu. Rest and stay hydrated.",
+      "fever,headache": "You might have a viral infection. Consult a healthcare professional.",
+      "cough,sore throat": "You might have a common cold. Rest and drink warm fluids.",
+      "cough": "You might have a common cold. Rest and stay hydrated.",
+      "headache": "You might be experiencing a migraine. Consider pain relief and rest.",
+      "sore throat": "You might have a throat infection. Gargle with warm salt water."
+    
+    
 
   }
   
