@@ -13,6 +13,16 @@
 
 }
 /* .container::before{  
+
+}
+.container1{
+  border: 1px solid white;
+  width: 60%;
+  margin: 0 auto;
+  background-color: #395cd8;
+
+}
+/* .container::before{
   content: "";
 position: absolute;
 top: 0;
