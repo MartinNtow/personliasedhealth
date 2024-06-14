@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from 'react';
 import styles from "../styles/chatbot.module.css";
+import Link from 'next/link';
 
 import { jsPDF } from 'jspdf';
 
@@ -59,7 +60,7 @@ function Chatbot() {
     } else if (inputType === 'symptoms') {
       const symptomsArray = symptoms.split(',').map(s => s.trim().toLowerCase());
       const symptomsKey = symptomsArray.sort().join(',');
-      suggestion = symptomsMapping[symptomsKey] || 'It\'s hard to diagnose. Please consult a healthcare professional.';
+      suggestion = symptomsMapping[symptomsKey] || "Interact with our CHATBOT about your health condition and Seek medical attention";
       
       setAnswer(suggestion);
       setShowInput(false);
@@ -130,6 +131,11 @@ function Chatbot() {
           <div className={styles.chatbotanswercontainer}>
             <p className={styles.chatbotanswer}>{answer}</p>
             <button onClick={generatePDF} className={styles.downloadbutton}>Download PDF Report</button>
+            <div>
+              <Link href="http://localhost:3001/">
+                  Interact with the CHATBOT
+              </Link>
+            </div>
           </div>
         )}
       </div>
