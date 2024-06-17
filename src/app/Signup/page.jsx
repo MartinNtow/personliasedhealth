@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
-import { auth } from "@/app/firebase/config";
+import {auth} from "../firebase/config";
 import { useRouter } from "next/navigation";
 import styles from "../styles/signup.module.css";
 
@@ -30,7 +30,6 @@ const SignUpPage = () => {
         const res = await createUserWithEmailAndPassword(email, password);
 
         if (res) {
-         
           setEmail("");
           setPassword("");
           setComPassword("");
