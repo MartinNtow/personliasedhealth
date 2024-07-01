@@ -51,7 +51,7 @@ const SendBar = (props: SendBarProps) => {
     <Show
       fallback={
         <div className="thinking">
-          <span>Please wait ...</span>
+          <span>Please wait for your health response...</span>
           <div className="stop" onClick={onStop}>
             Stop
           </div>
