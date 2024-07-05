@@ -1,48 +1,69 @@
 [
   {
-    "question": "Are you answering for yourself or someone",
+    "question": "Is this information for you?",
     "answers": [
-      { "text": "Myself",  "nextQuestion": 1 },
-      { "text": "Someone Else", "nextQuestion": 1 }
-    ]
-
-  },
-  {
-    "question": "What was your sex assigned at birth?",
-    "answers": [
-      { "text": "Male",  "nextQuestion": 2 },
-      { "text": "Female", "nextQuestion": 2 }
-    ]
-
-  },
-  {
-    "question": "How old are you?",
-    "input": "age"
-   
-  
-  },
-  {
-    "question": "Are you currently taking any medication?",
-    "answers": [
-      {"text": "Yes", "nextQuestion": 4},
-      {"text": "No", "nextQuestion": 4}
+      {
+        "text": "Yes",
+        "nextQuestion": 1
+      },
+      {
+        "text": "No",
+        "nextQuestion": 1
+      }
     ]
   },
- 
   {
-    "question": "Are you experiencing pain?",
+    "question": "What is your age?",
+    "input": "age",
+    "answers": []
+  },
+  {
+    "question": "What symptoms are you experiencing?",
+    "input": "symptoms",
+    "answers": []
+  },
+  {
+    "question": "Have you traveled recently?",
     "answers": [
-      {"text": "Yes", "nextQuestion": 5},
-      {"text": "No", "nextQuestion": 5}
+      {
+        "text": "Yes",
+        "nextQuestion": 4
+      },
+      {
+        "text": "No",
+        "nextQuestion": 5
+      }
     ]
   },
-
-
-  
   {
-    "question": "What condition is bothering you the most?",
-    "input": "symptoms"
+    "question": "Did you travel internationally?",
+    "answers": [
+      {
+        "text": "Yes",
+        "nextQuestion": 6
+      },
+      {
+        "text": "No",
+        "nextQuestion": 7
+      }
+    ]
+  },
+  {
+    "question": "Have you been in contact with anyone who is sick?",
+    "answers": [
+      {
+        "text": "Yes",
+        "nextQuestion": 8
+      },
+      {
+        "text": "No",
+        "nextQuestion": 9
+      }
+    ]
+  },
+  {
+    "question": "Please list your symptoms separated by commas.",
+    "input": "symptoms",
+    "answers": []
   }
-
-  
 ]
