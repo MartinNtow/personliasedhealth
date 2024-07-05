@@ -1,13 +1,13 @@
 [
   {
-    "question": "Is this information for you?",
+    "question": "Are you answering for yourself or someone",
     "answers": [
       {
-        "text": "Yes",
+        "text": "Myself",
         "nextQuestion": 1
       },
       {
-        "text": "No",
+        "text": "Someone else",
         "nextQuestion": 1
       }
     ]
