@@ -56,7 +56,7 @@ const page = () => {
       <Navbar />
       <div className={styles.container}>
         <div className={styles.header}>
-          <h1>Wellness Mindset</h1>
+          <h1>Wellnest Path</h1>
         </div>
 
         <div className={styles.container}>
