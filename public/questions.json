@@ -44,7 +44,7 @@
       },
       {
         "text": "No",
-        "nextQuestion": 7
+        "nextQuestion": 6
       }
     ]
   },
@@ -53,11 +53,11 @@
     "answers": [
       {
         "text": "Yes",
-        "nextQuestion": 8
+        "nextQuestion": 6
       },
       {
         "text": "No",
-        "nextQuestion": 9
+        "nextQuestion": 6
       }
     ]
   },

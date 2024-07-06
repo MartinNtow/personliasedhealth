@@ -2,7 +2,6 @@
 import { useState, useEffect } from 'react';
 import styles from "../styles/chatbot.module.css";
 import Link from 'next/link';
-
 import { jsPDF } from 'jspdf';
 
 function Chatbot() {
@@ -14,6 +13,8 @@ function Chatbot() {
   const [showInput, setShowInput] = useState(false);
   const [inputType, setInputType] = useState('');
   const [symptomsMapping, setSymptomsMapping] = useState({});
+  const [conversationHistory, setConversationHistory] = useState([]);
+  const [isLastQuestion, setIsLastQuestion] = useState(false);
 
   useEffect(() => {
     fetch('/questions.json')
@@ -28,6 +29,12 @@ function Chatbot() {
   }, []);
 
   const handleAnswer = (answer) => {
+    const newHistory = [
+      ...conversationHistory,
+      { question: questions[currentQuestion].question, answer: answer.text }
+    ];
+    setConversationHistory(newHistory);
+
     if (answer.nextQuestion !== undefined) {
       setCurrentQuestion(answer.nextQuestion);
       if (questions[answer.nextQuestion].input) {
@@ -45,26 +52,42 @@ function Chatbot() {
   const handleSubmit = (e) => {
     e.preventDefault();
     let suggestion = '';
-  
+
     if (inputType === 'age') {
+      const newHistory = [
+        ...conversationHistory,
+        { question: questions[currentQuestion].question, answer: age }
+      ];
+      setConversationHistory(newHistory);
       setShowInput(false);
       setCurrentQuestion(currentQuestion + 1);
-      setInputType('symptoms');
+      if (questions[currentQuestion + 1].input === 'symptoms') {
+        setInputType('symptoms');
+        setShowInput(true);
+      }
     } else if (inputType === 'symptoms') {
       const symptomsArray = symptoms.split(',').map(s => s.trim().toLowerCase());
       const symptomsKey = symptomsArray.sort().join(',');
       suggestion = symptomsMapping[symptomsKey] || "Your symptoms are not in our database. Please consult a healthcare professional for a proper diagnosis.";
-      
+
+      const newHistory = [
+        ...conversationHistory,
+        { question: questions[currentQuestion].question, answer: symptoms }
+      ];
+      setConversationHistory(newHistory);
+
       setAnswer(suggestion);
       setShowInput(false);
-  
-      // Check if the current question should move to the next one automatically
-      if (currentQuestion === 2) { // Assuming index 2 is the question "What symptoms are you experiencing?"
-        setCurrentQuestion(3); // Move to the next question after symptoms
+
+      const nextQuestionIndex = currentQuestion + 1;
+      if (questions[nextQuestionIndex] && questions[nextQuestionIndex].answers) {
+        setCurrentQuestion(nextQuestionIndex);
+        setShowInput(false);
+      } else {
+        setIsLastQuestion(true);
       }
     }
   };
-  
 
   const handleInput = (e) => {
     if (inputType === 'age') {
@@ -77,9 +100,15 @@ function Chatbot() {
   const generatePDF = () => {
     const doc = new jsPDF();
     doc.text("Chatbot Report", 10, 10);
-    doc.text(`Age: ${age}`, 10, 20);
-    doc.text(`Symptoms: ${symptoms}`, 10, 30);
-    doc.text(`Suggestion: ${answer}`, 10, 40);
+    conversationHistory.forEach((item, index) => {
+      doc.text(`${index + 1}. ${item.question}`, 10, 20 + index * 10);
+      doc.text(`Answer: ${item.answer}`, 10, 30 + index * 10);
+    });
+
+    if (answer) {
+      doc.text(`Suggestion: ${answer}`, 10, 30 + conversationHistory.length * 10);
+    }
+
     doc.save('report.pdf');
   };
 
@@ -90,7 +119,7 @@ function Chatbot() {
           <h1>Support Bot</h1>
           <div className={styles.chatbotmessages}>
             <div className={`${styles.chatbotquestioncontainer} ${styles.clearfix}`}>
-            <p className={styles.chatbotquestion}>{questions[currentQuestion].question}</p>
+              <p className={styles.chatbotquestion}>{questions[currentQuestion].question}</p>
             </div>
             <div className={styles.chatbotanswercontainer}>
               {questions[currentQuestion].input ? (
@@ -120,18 +149,18 @@ function Chatbot() {
                 </ul>
               )}
             </div>
-          </div>
-          {answer && (
-            <div className={styles.chatbotanswercontainer}>
-              <p className={styles.chatbotanswer}>{answer}</p>
-              <button onClick={generatePDF} className={styles.downloadbutton}>Download PDF Report</button>
-              <div>
-                <Link href="http://localhost:3001/">
-                  Interact with the CHATBOT
-                </Link>
+            {isLastQuestion && (
+              <div className={styles.chatbotanswercontainer}>
+                {answer && <p className={styles.chatbotanswer}>{answer}</p>}
+                <button onClick={generatePDF} className={styles.downloadbutton}>Download PDF Report</button>
+                <div>
+                  <Link href="http://localhost:3001/">
+                    Interact with the CHATBOT
+                  </Link>
+                </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       ) : (
         <div>Loading...</div>
