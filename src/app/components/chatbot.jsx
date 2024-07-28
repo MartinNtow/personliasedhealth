@@ -100,20 +100,24 @@ function Chatbot() {
   const generatePDF = () => {
     const doc = new jsPDF();
     let yOffset = 10;
-    const lineHeight = 10; // Define a line height for each question/answer pair
+    const lineHeight = 10;
 
     doc.text("Chatbot Report", 10, yOffset);
     yOffset += lineHeight;
 
     conversationHistory.forEach((item, index) => {
-      doc.text(`${index + 1}. ${item.question}`, 10, yOffset);
-      yOffset += lineHeight;
-      doc.text(`Answer: ${item.answer}`, 10, yOffset);
-      yOffset += lineHeight * 2; // Add extra spacing between question/answer pairs
+      let questionLines = doc.splitTextToSize(`${index + 1}. ${item.question}`, 180);
+      let answerLines = doc.splitTextToSize(`Answer: ${item.answer}`, 180);
+
+      doc.text(questionLines, 10, yOffset);
+      yOffset += questionLines.length * lineHeight;
+      doc.text(answerLines, 10, yOffset);
+      yOffset += answerLines.length * lineHeight * 2;
     });
 
     if (answer) {
-      doc.text(`Suggestion: ${answer}`, 10, yOffset);
+      let suggestionLines = doc.splitTextToSize(`Suggestion: ${answer}`, 180);
+      doc.text(suggestionLines, 10, yOffset);
     }
 
     doc.save('report.pdf');
