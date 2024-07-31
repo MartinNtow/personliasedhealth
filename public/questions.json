@@ -62,7 +62,7 @@
     ]
   },
   {
-    "question": "Please list your symptoms separated by commas.",
+    "question": "Please provide your symptom.",
     "input": "symptoms",
     "answers": []
   }
